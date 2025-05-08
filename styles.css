@@ -1,0 +1,56 @@
+:root{
+    --color-1: #fff;
+    --color-2: #222;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-2);
+    color: var(--color-1);
+    width: 100%;
+}
+
+/* -------- IDs -------- */
+/* -------- IDs -------- */
+
+#portadaPrincipal{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 853 / 1280;
+    overflow: hidden;
+    background-image: url(./Fotos-index/aia-main-movil.webp);
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+/* -------- PANTALLAS GRANDES -------- */
+/* -------- PANTALLAS GRANDES -------- */
+
+
+@media (min-width: 992px) {
+
+
+    /* -------- IDs -------- */
+    /* -------- IDs -------- */
+
+
+    #portadaPrincipal{
+        width: 100%;
+        aspect-ratio: 1920 / 1080;
+        background-image: url(./Fotos-index/aia-main.webp);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+
+}
