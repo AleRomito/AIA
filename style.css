@@ -1,0 +1,707 @@
+:root{
+    --color-1: #fff;
+    --color-2: #222;
+    --color-3: rgb(233, 165, 81);
+    --color-4: rgb(5, 39, 84);
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: var(--color-4);
+    color: var(--color-1);
+
+}
+header{
+    width: 100%;
+}
+main{
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: var(--color-3);
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-family: "Amarante", serif;
+    font-size: 2.5rem;
+    padding: 20px;
+    border-radius: 30px;
+    text-shadow:
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000;
+}
+h3{
+  font-family: "Amarante", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+}
+
+#navBar{
+    /* position: fixed; */
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--color-4);
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    z-index: 1001;
+    /* opacity: 0; */
+    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.9s ease;
+
+    /* transform: translateY(-100%); */
+  
+}
+#navBar.transparent{
+    background-color: transparent;
+}
+#navBar img{
+    display: block;
+}
+
+#navBar.visible{
+    transform: translateY(0);
+    opacity: 1;
+    position: sticky;
+}
+
+#menu-desplegable{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 10px;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    width: 300px;
+    background-color: var(--color-4);
+    transition: right 0.4s ease;
+    z-index: 1000;
+    border-radius: 0 0 0 30px;
+}
+#menu-desplegable.visible{
+    right: 0;
+}
+#menu-desplegable ul{
+    text-align: right;
+    padding-right: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+#menu-desplegable ul:hover{
+    transform: scale(1.1);
+    transform: translateX(-20px);
+    font-weight: bold;
+}
+
+#menu-burguer{
+    background-color: rgba(5, 39, 84, 0.7);
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  .burger {
+      position: relative;
+      width: 40px;
+      height: 30px;
+      background: transparent;
+      cursor: pointer;
+      display: block;
+    }
+    
+    .burger input {
+      display: none;
+    }
+    
+    .burger span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: var(--color-3);
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+    }
+    
+    .burger span:nth-of-type(1) {
+      top: 0px;
+      transform-origin: left center;
+    }
+    
+    .burger span:nth-of-type(2) {
+      top: 50%;
+      transform: translateY(-50%);
+      transform-origin: left center;
+    }
+    
+    .burger span:nth-of-type(3) {
+      top: 100%;
+      transform-origin: left center;
+      transform: translateY(-100%);
+    }
+    
+    .burger input:checked ~ span:nth-of-type(1) {
+      transform: rotate(45deg);
+      top: 0px;
+      left: 5px;
+    }
+    
+    .burger input:checked ~ span:nth-of-type(2) {
+      width: 0%;
+      opacity: 0;
+    }
+    
+    .burger input:checked ~ span:nth-of-type(3) {
+      transform: rotate(-45deg);
+      top: 28px;
+      left: 5px;
+    }
+
+footer{
+    width: 100%;
+    background-color: var(--color-3);
+    color: #000;
+    padding: 10px;
+    text-align: end;
+}
+
+/* ------- CLASES -------
+   ------- CLASES ------- */
+
+.verPC{
+  display: none;
+}
+
+.fondo1{
+    background-image: url(./FOTOS-INDEX/libro-azul-english.webp);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1244 / 829 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+.fondo2{
+    background-image: url(./FOTOS-INDEX/nina-whiteboard.webp);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1244 / 829 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+
+}
+.fondo3{
+    background-image: url(./FOTOS-INDEX/mujer-laptop.webp);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1244 / 829 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+
+}
+
+.bloqueTexto {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px 0 50px 0;
+}
+/* Estilo base para los <p> */
+.bloqueTexto p {
+  position: absolute;
+  margin: 0;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+/* Texto visible por defecto */
+.bloqueTexto .TextoInicial {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow:
+    1px 1px 0 black,
+    -1px 1px 0 black,
+    1px -1px 0 black,
+    -1px -1px 0 black;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Texto oculto con fondo blanco */
+.TextoOculto {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  font-size: 1rem;
+}
+.bloqueTexto{
+  margin: 10px;
+}
+
+
+/* -------- IDS -------
+   -------- IDS ------- */
+
+#imgInicial{
+    width: 100%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    background-image: url(./FOTOS-INDEX/clase-grupal-ingles.webp);
+    background-size: cover;
+    background-position: 30% center;
+    background-repeat: no-repeat;
+    
+}
+#dialogoInicial{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    grid-column: 3 / 15;
+    grid-row: 6 / 16;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+/* BOTON INSCRIBETE AHORA */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#inscribeteBtn{
+    width: 50%;
+    height: 60px;
+    border-radius: 30px;
+    grid-row: 18 / 20;
+    grid-column: 4 / 14;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: var(--color-4);
+    color: white;
+    animation: pulse 2s ease-in-out infinite;
+}
+#porQue{
+  width: 90%;
+  height: 80px;
+  background-color: var(--color-3);
+  border-radius: 40px 0 0 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#porQue p{
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+  text-align: center;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+#curPer{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#separadorVanesa{
+  width: 90%;
+  height: 80px;
+  background-color: var(--color-3);
+  border-radius: 40px 0 0 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#separadorVanesa p{
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+  text-align: center;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+
+#vanesa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#vanesa img{
+  width: 95%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
+#vanesa p{
+  width: 95%;
+  padding: 15px 0 15px 0;
+}
+
+#contContenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#contacto{
+  width: 95%;
+  text-align: center;
+  background-color: var(--color-3);
+  color: black;
+  padding: 50px;
+  
+  margin-top: 50px;
+  border-radius: 30px;
+}
+#logoRedes{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+#logoRedes img{
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+#logoRedes img:hover{
+  transform: scale(1.2);
+}
+#acordCurricula{
+  padding-top: 30px;
+  width: 95%;
+}
+#curricAprendeDeCasa{
+  width: 95%;
+  padding-top: 20px;
+}
+#curricAprendeDeCasa img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* -------PANTALLAS GRANDES---------
+   -------PANTALLAS GRANDES--------- */
+
+@media (min-width: 992px) {
+    header{
+        width: 100%;
+    }
+
+    h1{
+        color: var(--color-3);
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        font-size: 4rem;
+        padding: 20px;
+        border-radius: 30px;
+        text-shadow:
+        2px 2px 0 #000,
+        -2px 2px 0 #000,
+        2px -2px 0 #000,
+        -2px -2px 0 #000;
+    }
+    h3{
+      font-family: "Amarante", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 4rem;
+      padding-bottom: 20px;
+    }
+
+
+
+    /* ------- CLASES -------
+    ------- CLASES ------- */
+
+  .verMovil{
+    display: none;
+  }
+  .verPC{
+    display: block;
+  }
+    
+  .fondo1, .fondo2, .fondo3 {
+    position: relative;
+    overflow: hidden;
+  }
+  .fondo1::before,
+  .fondo2::before,
+  .fondo3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+    transform: scale(1);
+  }
+  .fondo1::before {
+    background-image: url('./FOTOS-INDEX/libro-azul-english.webp');
+  }
+
+  .fondo2::before {
+    background-image: url('./FOTOS-INDEX/nina-whiteboard.webp');
+  }
+
+  .fondo3::before {
+    background-image: url('./FOTOS-INDEX/mujer-laptop.webp');
+  }
+
+  .TextoInicial,
+  .TextoOculto {
+    position: relative;
+    z-index: 1;
+  }
+
+  .fondo1:hover::before,
+  .fondo2:hover::before,
+  .fondo3:hover::before {
+    transform: scale(1.1);
+  }
+  .bloqueTexto:has(.TextoInicial:hover)::before {
+    transform: scale(1.1);
+  }
+
+    /* -------- IDS -------
+    -------- IDS ------- */
+    
+    #imgInicial{
+        width: 100%;
+        height: 800px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        background-image: url(./FOTOS-INDEX/clase-grupal-ingles.webp);
+        background-size: 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+        
+    }
+    #dialogoInicial{
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+      grid-column: 4 / 10;
+      grid-row: 5 / 7;
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      margin: 0;
+      padding: 10px;
+      border-radius: 30px;
+    }
+    #inscribeteBtn{
+      width: 50%;
+      height: 60px;
+      border-radius: 30px;
+      grid-row: 8 / 10;
+      grid-column: 5 / 9;
+      justify-self: center;
+      align-self: center;
+      width: 100%;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease; /* Agrega esta línea */
+    }
+
+    #inscribeteBtn:hover {
+      transform: scale(1.2); /* Aplica el hover sólo en pantallas grandes */
+      color: var(--color-3);
+    }
+    #curPer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .bloqueTexto {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 100%;
+    }
+    #porQue p{
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bolder;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    #porQue p:hover{
+      transform: scale(1.2);
+    }
+    #separadorVanesa p{
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bolder;
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
+
+    #vanesa{
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+      align-items: center;
+      padding: 20px;
+      margin: 10px;
+      gap: 20px; /* Espacio entre columnas */
+    }
+    #vanesa img{
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 50px;
+    }
+    #vanesa p{
+      text-align: left;
+      padding: 25px;
+    }
+
+
+    /* CONTACTO ---- CONTACTO */
+      #contacto{
+        width: 50%;
+        text-align: center;
+        background-color: var(--color-3);
+        color: black;
+        padding: 50px;
+        margin-top: 50px;
+        border-radius: 30px;
+      }
+      #logoRedes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+      }
+      #logoRedes img{
+        width: 80px;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+      #logoRedes img:hover{
+        transform: scale(1.2);
+      }
+      #acordCurricula{
+        padding-top: 30px;
+        width: 80%;
+      }
+      #curricAprendeDeCasa{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        padding: 20px;
+        margin: 10px;
+        gap: 20px;
+        width: 80%;
+        padding-top: 20px;
+      }
+      #curricAprendeDeCasa img{
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+      }
+      #curricAprendeDeCasa p{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      #curricAprendeDeCasa button{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+      }
+
+
+
+
+
+
+}  
+
+

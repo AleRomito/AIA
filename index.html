@@ -1,48 +1,139 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprender Ingles Ahora</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <link rel="icon" href="./Fotos-index/AIA-ICONO.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles.css"> -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aprender Ingles Ahora - Inicio</title>
+        <link rel="shortcut icon" href="./FOTOS-INDEX/AIA-ICONO.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div id="navBar">
+                <div>
+                <a href="https://aprenderinglesahora.com"><img height="50px" style="padding: 5px 0 5px 0;" src="./FOTOS-INDEX/Ingles-Canadiense-Aprende-Ingles-con-una-Profesora-Canadiense.png" alt="Aprende ingles ahora con una profesora canadiense"></a>
+                </div>
+                <div id="menu-burguer">
+                    <label class="burger">
+                        <input type="checkbox" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            <div id="menu-desplegable" class="oculto">
+                <ul style="padding-top: 80px;">
+                    <a class="nav-link active" href="https://aprenderinglesahora.com">Home</a>
+                </ul>
+                <ul>
+                    <a class="nav-link active" href="./curricula/">Curriculos</a>
+                </ul>
+                <ul style="padding-bottom: 60px;">
+                    <a class="nav-link active" href="./contacto/">Contacto</a>
+                </ul>
+            </div>
+        </header>
+        <main>
 
-</head>
-<body>
-    
-    <div id="portadaPrincipal"></div>
-    <div id="espacioContacto"></div>
-    <div id="iconoTel">
-        <a target="_blank" style="text-decoration: none; color: white;" href="tel:2236208067">
-            <img src="./Fotos-index/Logo-telefono-BN.webp" alt="">
-        </a>
-    </div>
-    <div id="iconoW">
-        <a href="https://wa.me/5492236208067?text=Hola!!!%20Me%20gustaría%20más%20información%20sobre%20como%20aprender%20inglés..." target="_blank">
-            <img src="./Fotos-index/Redes-Logo-Whatsapp.webp" alt="">
-        </a>
-    </div>
+            <div id="imgInicial">
+                <!-- <h1>Aprender Inglés Ahora</h1> -->
+                <div id="dialogoInicial">
+                    <h3>
+                        Empieza tu Viaje de Aprendizaje de Inglés Hoy
+                    </h3>
+                    <p>
+                        ¡No esperes más para mejorar tu inglés! Únete a las clases personalizadas de Vanesa y experimenta una enseñanza dedicada y adaptada a tus necesidades. Con su experiencia y pasión, Vanesa te guiará hacia el éxito en tu dominio del inglés. ¡Inscríbete hoy y comienza a comunicarte con confianza!
+                    </p>
+                </div>
+                <button id="inscribeteBtn">
+                    Inscríbete Ahora
+                </button>
+            </div>
+
+            <h1>Aprender Inglés Ahora</h1>
+
+            <div id="porQue">
+                <p data-bs-toggle="modal" data-bs-target="#porqueModal">¿Por qué aprender inglés?</p>
+            </div>
+            
+            <!-- Modal POR QUE APRENDER -->
+
+                <div class="modal fade" id="porqueModal" tabindex="-1" aria-labelledby="porqueModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" >
+                        <div class="modal-content">
+                            <div class="modal-header"  style="color: black; background-color: var(--color-3);">
+                                <h2 class="modal-title fs-5" id="porqueModalLabel" style="font-weight: bolder;">¿Por qué aprender inglés?</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="color: black; background-color: rgba(233, 165, 81, 0.7); margin: 10px; border-radius: 10px;">
+                                Aprender inglés es una herramienta esencial en el mundo moderno, ya que abre puertas a oportunidades profesionales, académicas y culturales a nivel global. <br>
+                                Es el idioma más utilizado en negocios, ciencia, tecnología y viajes, y dominarlo permite acceder a una vasta cantidad de información y experiencias. <br>
+                                Las clases privadas por videollamada representan la mejor manera de aprenderlo, ya que ofrecen atención personalizada, retroalimentación inmediata y flexibilidad horaria. <br>
+                                A diferencia de las clases pregrabadas, estas sesiones en vivo permiten una comunicación activa, motivación constante y un enfoque adaptado a las necesidades de cada estudiante, facilitando así un aprendizaje más efectivo, dinámico y centrado en resultados.
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
+            <div id="curPer">
+                <div class="bloqueTexto fondo1">
+                    <p class="TextoInicial p1">Escucha y habla</p>
+                    <p class="TextoOculto p2">
+                        Ideal para aquellos que no están interesados en la gramática. <br>
+                        Mejora tu comprensión y capacidad para comunicarte eficazmente.
+                    </p>
+                </div>
+                <div class="bloqueTexto fondo2">
+                    <p class="TextoInicial p1">Pronunciación</p>
+                    <p class="TextoOculto p2">
+                        Diseñado para aquellos que ya pueden hablar y entender inglés. <br>
+                        Mejora tu acento y pronunciación para una comunicación más clara.
+                    </p>
+                </div>
+                <div class="bloqueTexto fondo3">
+                    <p class="TextoInicial p1">Lectura y escritura</p>
+                    <p class="TextoOculto p2">
+                        Perfecto para aquellos que necesitan un nivel más alto de gramática. <br>
+                        Mejora tu comprensión y comunicación escrita.
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="separadorVanesa">
+                <p data-bs-toggle="modal" data-bs-target="#porqueModal">Es hora de aprender!</p>
+            </div>
+            <div id="vanesa">
+                <img src="./FOTOS-INDEX/V-Stay-Front.webp" alt="">
+                <p>                        
+                    <span style="font-family: Amarante, serif; font-size: xx-large;"><strong>Vanesa Stay</strong></span>
+                    <br>
+                    <br>
+                    ¡Conoce a Vanesa, tu guía ideal para aprender inglés de forma efectiva y motivadora!
+                    Criada y formada en Canadá, Vanesa no solo domina el idioma a nivel experto, sino que también te brinda una auténtica inmersión cultural que enriquece cada clase. <br>
+                    Su pasión por la enseñanza y su enfoque personalizado garantizan que cada estudiante avance a su propio ritmo y con confianza. <br>
+                    Con una amplia experiencia y un historial comprobado de éxito, Vanesa transforma el aprendizaje en una experiencia dinámica, práctica y adaptada a tus objetivos académicos, profesionales o personales. <br>
+                    No dejes pasar la oportunidad de estudiar con una instructora dedicada, cercana y altamente calificada. <br>
+                    <br>
+                    ¡Inscribite hoy y comienza tu camino hacia el dominio del inglés con Vanesa!"
+ 
+                </p>
+            </div>
+        </main>
+        <footer class="verPC">Aprender Ingles Ahora - 📞 +54-9-223-6208067 - ✉️ info@aprenderinglesahora.com</footer>
+        <footer class="verMovil">Aprender Ingles Ahora <br>📞 +54-9-223-6208067 <br>✉️ info@aprenderinglesahora.com</footer>
 
 
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./ASSETS/menuDesplegable.js"></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-</body>
-</html>
+    </body>
+    </html>
