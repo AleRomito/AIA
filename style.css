@@ -559,7 +559,7 @@ footer{
   }
 
 .bloqueTexto.zoom-bg {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   /* Asegurarse de que el texto esté por encima del background pseudo-elemento */
   .bloqueTexto > * {
@@ -828,6 +828,9 @@ footer{
       #secTitulo h3{
         padding: 0;
         margin: 20px;
+      }
+      .bloqueTexto.zoom-bg {
+        transform: none;
       }
 
 
