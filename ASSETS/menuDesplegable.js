@@ -19,28 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navBar');
-  
-    if (window.scrollY > 500) {
-      navbar.classList.add('transparent');
-    } else {
-      navbar.classList.remove('transparent');
-    }
-  });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.getElementById("navBar");
+  const navbar = document.getElementById("navBar");
+  const logoNavBarTEXTO = document.getElementById("logoNavBarTEXTO");
 
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 50) {
-        navbar.classList.add("visible");
-      } else {
-        navbar.classList.remove("visible");
-        navbar.style.position = "fixed";
-      }
-    });
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 500) {
+      navbar.classList.add("transparent");
+      logoNavBarTEXTO.classList.add("transparent");
+    } else {
+      navbar.classList.remove("transparent");
+      logoNavBarTEXTO.classList.remove("transparent");
+    }
   });
+});
+
 
 
 let timeoutId = null; // Variable global para guardar el temporizador
@@ -102,3 +96,6 @@ document.querySelectorAll('.bloqueTexto').forEach(bloque => {
     }
   });
 });
+
+
+
