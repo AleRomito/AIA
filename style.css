@@ -29,7 +29,7 @@ header{
 }
 main{
     width: 100%;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,8 +59,34 @@ h3{
   padding-bottom: 20px;
 }
 
+#logoNavBar{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#logoNavBarTEXTO{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 0.8rem;
+  text-align: left;
+
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+#logoNavBarTEXTO.transparent{
+  opacity: 0;
+}
+
+#logoNavBarTEXTO a{
+  text-decoration: none;
+  color: white;
+  margin: 0;
+}
+#logoNavBarTEXTO p{
+  margin: 0;
+}
 #navBar{
-    /* position: fixed; */
     position: sticky;
     top: 0;
     display: flex;
@@ -71,23 +97,14 @@ h3{
     align-items: center;
     padding: 5px 10px;
     z-index: 1001;
-    /* opacity: 0; */
-    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.9s ease;
-
-    /* transform: translateY(-100%); */
+    transition: background-color 0.5s ease
   
-}
-#navBar.transparent{
-    background-color: transparent;
 }
 #navBar img{
     display: block;
 }
-
-#navBar.visible{
-    transform: translateY(0);
-    opacity: 1;
-    position: sticky;
+#navBar.transparent{
+  background-color: rgba(5, 39, 84, 0);
 }
 
 #menu-desplegable{
@@ -187,10 +204,11 @@ h3{
 
 footer{
     width: 100%;
-    background-color: var(--color-3);
-    color: #000;
+    background-color: black;
+    color: gray;
     padding: 10px;
     text-align: end;
+    padding: 50px 20px 50px 0;
 }
 
 /* ------- CLASES -------
@@ -281,6 +299,15 @@ footer{
   margin: 10px;
 }
 
+/* para Accordion bootstrap */
+.accordion-button:not(.collapsed) {
+  background-color: #f8f9fa; /* Fondo claro cuando está abierto */
+}
+
+.accordion-button.collapsed {
+  background-color: transparent; /* Sin fondo al estar cerrado */
+}
+
 
 /* -------- IDS -------
    -------- IDS ------- */
@@ -347,8 +374,20 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
 }
+.fade-loop {
+  opacity: 1;
+  animation: fadeLoop 3s ease-in-out infinite;
+}
+
+@keyframes fadeLoop {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
 #porQue p{
   margin: 0;
   font-size: 1.3rem;
@@ -367,6 +406,7 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 #separadorVanesa{
@@ -421,7 +461,7 @@ footer{
 #contacto{
   width: 95%;
   text-align: center;
-  background-color: var(--color-3);
+  background-color:  rgb(228, 228, 228);
   color: black;
   padding: 50px;
   
@@ -644,7 +684,7 @@ footer{
       #contacto{
         width: 50%;
         text-align: center;
-        background-color: var(--color-3);
+        background-color: rgb(228, 228, 228);
         color: black;
         padding: 50px;
         margin-top: 50px;
