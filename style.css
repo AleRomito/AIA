@@ -203,6 +203,7 @@ h3{
     }
 
 footer{
+    margin-top: 50px;
     width: 100%;
     background-color: black;
     color: gray;
@@ -247,6 +248,30 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative
+
+}
+.fotoPpalContacto{
+    width: 100%;
+    background-image: url(./FOTOS-INDEX/laptop-sobre-mesa.webp);
+    background-size: cover;
+    background-position: 25%;
+    aspect-ratio: 400 / 600 ;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    position: relative
+
+}
+.fotoPpalCurricula{
+    width: 100%;
+    background-image: url(./FOTOS-INDEX/img-whiteboard-iStock-1297624591.webp);
+    background-size: cover;
+    background-position: 75%;
+    aspect-ratio: 400 / 600 ;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
     position: relative
 
 }
@@ -497,6 +522,24 @@ footer{
   height: auto;
   border-radius: 20px;
 }
+#curricAprendeDeCasa button{
+  display: block;
+  margin: 0 auto; /* Esto centra horizontalmente el botón */
+}
+#secTitulo{
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 0;
+  width: 80%;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#secTitulo h3{
+  padding: 0;
+  margin: 20px;
+}
 
 /* -------PANTALLAS GRANDES---------
    -------PANTALLAS GRANDES--------- */
@@ -582,6 +625,15 @@ footer{
   .bloqueTexto:has(.TextoInicial:hover)::before {
     transform: scale(1.1);
   }
+  .fotoPpalContacto{
+    background-position: center;
+    aspect-ratio: 1244 / 400 ;
+  }
+  .fotoPpalCurricula{
+    background-position: center 25%;
+    aspect-ratio: 1244 / 400 ;
+  }
+
 
     /* -------- IDS -------
     -------- IDS ------- */
@@ -620,11 +672,11 @@ footer{
       align-self: center;
       width: 100%;
       font-size: 1.5rem;
-      transition: transform 0.3s ease; /* Agrega esta línea */
+      transition: transform 0.3s ease; 
     }
 
     #inscribeteBtn:hover {
-      transform: scale(1.2); /* Aplica el hover sólo en pantallas grandes */
+      transform: scale(1.2);
       color: var(--color-3);
     }
     #curPer {
@@ -736,6 +788,22 @@ footer{
         grid-column: 2 / 3;
         grid-row: 2 / 3;
       }
+
+      #secTitulo{
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black;
+        padding: 0;
+        width: 50%;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #secTitulo h3{
+        padding: 0;
+        margin: 20px;
+      }
+
 
 
 
