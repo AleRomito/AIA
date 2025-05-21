@@ -286,7 +286,9 @@ footer{
   background-size: cover;
   background-position: center;
   border-radius: 50px 0 50px 0;
+  transition: transform 0.5s ease-in-out;
 }
+
 /* Estilo base para los <p> */
 .bloqueTexto p {
   position: absolute;
@@ -434,6 +436,7 @@ footer{
   align-items: center;
 }
 
+
 #separadorVanesa{
   width: 90%;
   height: 80px;
@@ -540,6 +543,29 @@ footer{
   padding: 0;
   margin: 20px;
 }
+
+/* PARA HOVER EN CURPER */
+
+.bloqueTexto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: transform 1.5s ease;
+    transform: scale(1);
+  }
+
+.bloqueTexto.zoom-bg {
+    transform: scale(1.05);
+  }
+  /* Asegurarse de que el texto esté por encima del background pseudo-elemento */
+  .bloqueTexto > * {
+    position: relative;
+    z-index: 1;
+  }
 
 /* -------PANTALLAS GRANDES---------
    -------PANTALLAS GRANDES--------- */
