@@ -127,3 +127,50 @@ document.addEventListener("DOMContentLoaded", function () {
     checkVisibility(); // ejecutar al cargar
   }
 });
+
+// ADAPTABILIDAD DEL CARROUSEL DE TESTIMONIOS
+
+document.addEventListener("DOMContentLoaded", function () {
+  function agruparTestimonios() {
+    const anchoPantalla = window.innerWidth;
+    const carouselInner = document.querySelector("#carouselTestimonios .carousel-inner");
+
+    // Si el ancho es mayor a 768px, hacemos la agrupación
+    if (anchoPantalla >= 768) {
+      const testimonios = document.querySelectorAll(".testimonio");
+      
+      // Evitar duplicar si ya se agruparon
+      if (!carouselInner.querySelector(".carousel-item .testimonio + .testimonio")) {
+        // Limpiar el contenido actual del carousel-inner
+        carouselInner.innerHTML = "";
+
+        // Crear un nuevo carousel-item
+        const nuevoItem = document.createElement("div");
+        nuevoItem.classList.add("carousel-item", "active");
+
+        // Crear un contenedor para los testimonios agrupados
+        const contenedor = document.createElement("div");
+        contenedor.classList.add("contenedor-testimonios");
+        contenedor.style.display = "flex";
+        contenedor.style.gap = "1rem";
+        contenedor.style.justifyContent = "center";
+        contenedor.style.flexWrap = "wrap"; // por si no caben
+
+        testimonios.forEach(testimonio => {
+          contenedor.appendChild(testimonio);
+        });
+
+        nuevoItem.appendChild(contenedor);
+        carouselInner.appendChild(nuevoItem);
+      }
+    }
+  }
+
+  agruparTestimonios();
+
+  // Opcional: ejecutar al redimensionar la ventana
+  window.addEventListener("resize", function () {
+    // Recargar la página si se cambia el tamaño de forma significativa
+    location.reload();
+  });
+});
