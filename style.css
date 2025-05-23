@@ -456,6 +456,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
 }
 #separadorVanesa p{
@@ -585,10 +586,12 @@ footer{
 
 #carouselTestimonios{
   width: 95%;
-  height: 400px;
+  height: 450px;
 }
+
 .testimonio{
   width: 100%;
+  height: 450px;
   background-color: #fff;
   color: black;
   padding: 15px 40px 30px 40px;
@@ -908,6 +911,18 @@ footer{
       .testimonio{
         height: 450px;
       }
+        .contenedor-testimonios {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .testimonio {
+    flex: 1 1 30%; /* Permite que hasta 3 testimonios se acomoden horizontalmente */
+    max-width: 30%;
+  }
+
 
 
 
