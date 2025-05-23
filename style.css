@@ -583,17 +583,15 @@ footer{
 
 /* TESTIMONIOS */
 
-#loQueDicen{
+#carouselTestimonios{
   width: 95%;
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
+  height: 400px;
 }
 .testimonio{
   width: 100%;
   background-color: #fff;
   color: black;
-  padding: 15px;
+  padding: 15px 40px 30px 40px;
   border-radius: 15px;
   margin-top: 15px;
 }
@@ -616,6 +614,12 @@ footer{
 .oracion{
   display: block;
   text-indent: 1em;
+}
+.carousel-item{
+  padding: 5px;
+}
+.carousel-indicators{
+  margin-bottom: 0;
 }
 
 /* -------PANTALLAS GRANDES---------
@@ -893,18 +897,17 @@ footer{
       .bloqueTexto.zoom-bg {
         transform: none;
       }
-      #loQueDicen{
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        justify-content: center;
-      }
-      #loQueDicen > .testimonio{
-        flex: 1 1 45%;
-        max-width: 500px;
-      }
 
-
+      .contenedor-testimonios .testimonio {
+        flex: 1 1 30%;
+        max-width: 30%;
+      }
+      #carouselTestimonios{
+        height: 450px;
+      }
+      .testimonio{
+        height: 450px;
+      }
 
 
 
