@@ -134,43 +134,51 @@ document.addEventListener("DOMContentLoaded", function () {
   function agruparTestimonios() {
     const anchoPantalla = window.innerWidth;
     const carouselInner = document.querySelector("#carouselTestimonios .carousel-inner");
+    const indicadores = document.querySelector(".carousel-indicators");
 
-    // Si el ancho es mayor a 768px, hacemos la agrupación
     if (anchoPantalla >= 768) {
-      const testimonios = document.querySelectorAll(".testimonio");
-      
-      // Evitar duplicar si ya se agruparon
-      if (!carouselInner.querySelector(".carousel-item .testimonio + .testimonio")) {
-        // Limpiar el contenido actual del carousel-inner
-        carouselInner.innerHTML = "";
+      const testimonios = Array.from(document.querySelectorAll(".testimonio"));
 
-        // Crear un nuevo carousel-item
+      // Limpiar contenido actual
+      carouselInner.innerHTML = "";
+      indicadores.innerHTML = "";
+
+      const testimoniosPorGrupo = 3;
+      const totalSlides = Math.ceil(testimonios.length / testimoniosPorGrupo);
+
+      for (let i = 0; i < testimonios.length; i += testimoniosPorGrupo) {
         const nuevoItem = document.createElement("div");
-        nuevoItem.classList.add("carousel-item", "active");
+        nuevoItem.classList.add("carousel-item");
+        if (i === 0) nuevoItem.classList.add("active");
 
-        // Crear un contenedor para los testimonios agrupados
         const contenedor = document.createElement("div");
         contenedor.classList.add("contenedor-testimonios");
-        contenedor.style.display = "flex";
-        contenedor.style.gap = "1rem";
-        contenedor.style.justifyContent = "center";
-        contenedor.style.flexWrap = "wrap"; // por si no caben
 
-        testimonios.forEach(testimonio => {
+        testimonios.slice(i, i + testimoniosPorGrupo).forEach(testimonio => {
           contenedor.appendChild(testimonio);
         });
 
         nuevoItem.appendChild(contenedor);
         carouselInner.appendChild(nuevoItem);
+
+        // Crear indicador
+        const indicador = document.createElement("button");
+        indicador.type = "button";
+        indicador.setAttribute("data-bs-target", "#carouselTestimonios");
+        indicador.setAttribute("data-bs-slide-to", i / testimoniosPorGrupo);
+        indicador.setAttribute("aria-label", `Slide ${i / testimoniosPorGrupo + 1}`);
+        if (i === 0) {
+          indicador.classList.add("active");
+          indicador.setAttribute("aria-current", "true");
+        }
+        indicadores.appendChild(indicador);
       }
     }
   }
 
   agruparTestimonios();
 
-  // Opcional: ejecutar al redimensionar la ventana
   window.addEventListener("resize", function () {
-    // Recargar la página si se cambia el tamaño de forma significativa
     location.reload();
   });
 });
