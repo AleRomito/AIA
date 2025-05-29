@@ -275,6 +275,18 @@ footer{
     position: relative
 
 }
+.fotoPpalAranceles{
+    width: 100%;
+    background-image: url(./FOTOS-INDEX/mujer-laptop.webp);
+    background-size: cover;
+    background-position: 25%;
+    aspect-ratio: 400 / 600 ;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    position: relative
+
+}
 
 .bloqueTexto {
   width: 100%;
@@ -335,6 +347,15 @@ footer{
   background-color: transparent; /* Sin fondo al estar cerrado */
 }
 
+/* TARJETAS ARANELES  */
+#precios{
+  display: flex;
+  justify-content: center;
+}
+#precios img{
+  width: 90%;
+  padding-top: 20px;
+}
 
 /* -------- IDS -------
    -------- IDS ------- */
@@ -715,6 +736,10 @@ footer{
   }
   .fotoPpalCurricula{
     background-position: center 25%;
+    aspect-ratio: 1244 / 400 ;
+  }
+  .fotoPpalAranceles{
+    background-position: center 50%;
     aspect-ratio: 1244 / 400 ;
   }
 
