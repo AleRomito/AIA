@@ -347,15 +347,8 @@ footer{
   background-color: transparent; /* Sin fondo al estar cerrado */
 }
 
-/* TARJETAS ARANELES  */
-#precios{
-  display: flex;
-  justify-content: center;
-}
-#precios img{
-  width: 90%;
-  padding-top: 20px;
-}
+
+
 
 /* -------- IDS -------
    -------- IDS ------- */
