@@ -123,62 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", checkVisibility);
-    window.addEventListener("resize", checkVisibility); // por si cambian las dimensiones
+//    window.addEventListener("resize", checkVisibility); // por si cambian las dimensiones
     checkVisibility(); // ejecutar al cargar
   }
 });
 
-// ADAPTABILIDAD DEL CARROUSEL DE TESTIMONIOS
-
-document.addEventListener("DOMContentLoaded", function () {
-  function agruparTestimonios() {
-    const anchoPantalla = window.innerWidth;
-    const carouselInner = document.querySelector("#carouselTestimonios .carousel-inner");
-    const indicadores = document.querySelector(".carousel-indicators");
-
-    if (anchoPantalla >= 768) {
-      const testimonios = Array.from(document.querySelectorAll(".testimonio"));
-
-      // Limpiar contenido actual
-      carouselInner.innerHTML = "";
-      indicadores.innerHTML = "";
-
-      const testimoniosPorGrupo = 3;
-      const totalSlides = Math.ceil(testimonios.length / testimoniosPorGrupo);
-
-      for (let i = 0; i < testimonios.length; i += testimoniosPorGrupo) {
-        const nuevoItem = document.createElement("div");
-        nuevoItem.classList.add("carousel-item");
-        if (i === 0) nuevoItem.classList.add("active");
-
-        const contenedor = document.createElement("div");
-        contenedor.classList.add("contenedor-testimonios");
-
-        testimonios.slice(i, i + testimoniosPorGrupo).forEach(testimonio => {
-          contenedor.appendChild(testimonio);
-        });
-
-        nuevoItem.appendChild(contenedor);
-        carouselInner.appendChild(nuevoItem);
-
-        // Crear indicador
-        const indicador = document.createElement("button");
-        indicador.type = "button";
-        indicador.setAttribute("data-bs-target", "#carouselTestimonios");
-        indicador.setAttribute("data-bs-slide-to", i / testimoniosPorGrupo);
-        indicador.setAttribute("aria-label", `Slide ${i / testimoniosPorGrupo + 1}`);
-        if (i === 0) {
-          indicador.classList.add("active");
-          indicador.setAttribute("aria-current", "true");
-        }
-        indicadores.appendChild(indicador);
-      }
-    }
-  }
-
-  agruparTestimonios();
-
-  window.addEventListener("resize", function () {
-    location.reload();
-  });
-});
