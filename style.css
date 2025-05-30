@@ -241,7 +241,7 @@ footer{
 
 }
 .fondo3{
-    background-image: url(./FOTOS-INDEX/mujer-laptop.webp);
+    background-image: url(./FOTOS-INDEX/nina-laptop.webp);
     background-size: cover;
     background-position: center;
     aspect-ratio: 1244 / 829 ;
@@ -347,8 +347,15 @@ footer{
   background-color: transparent; /* Sin fondo al estar cerrado */
 }
 
-
-
+/* TARJETAS ARANCELES  */
+#precios{
+  display: flex;
+  justify-content: center;
+}
+#precios img{
+  width: 90%;
+  padding-top: 20px;
+}
 
 /* -------- IDS -------
    -------- IDS ------- */
@@ -588,7 +595,7 @@ footer{
   }
 
 .bloqueTexto.zoom-bg {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 /* Asegurarse de que el texto esté por encima del background pseudo-elemento */
 .bloqueTexto > * {
@@ -919,27 +926,9 @@ footer{
         transform: none;
       }
 
-      .contenedor-testimonios .testimonio {
-        flex: 1 1 30%;
-        max-width: 30%;
+      .swiffy-slider{
+        width: 90%;
       }
-      #carouselTestimonios{
-        height: 450px;
-      }
-      .testimonio{
-        height: 450px;
-      }
-        .contenedor-testimonios {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .testimonio {
-    flex: 1 1 30%; /* Permite que hasta 3 testimonios se acomoden horizontalmente */
-    max-width: 30%;
-  }
 
 
 
