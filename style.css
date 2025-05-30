@@ -930,6 +930,16 @@ footer{
         width: 90%;
       }
 
+      #precios{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      #precios img{
+        width: 40%;
+        padding-top: 20px;
+      }
+
 
 
 
